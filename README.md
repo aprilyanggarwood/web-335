@@ -1,2 +1,6 @@
-# web-335
-Introduction to NoSQL
+# WEB 335 Introduction to NoSQL
+
+## Contributors
+
+* Professor Krasso
+* April Yang
