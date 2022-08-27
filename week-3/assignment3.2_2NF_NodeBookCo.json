@@ -1,0 +1,56 @@
+/*  
+Title: assignment3.2_2NF_NodeBookCo.json 
+Author: April Yang
+Date: 08 26 2022
+Description: Create a NoSQL Data Structure to represent NodeBookCo’s ORD.  
+*/
+
+{
+  "publisher": [
+    {
+      "_id": "001",
+      "publisher_name": "Fresh Flower",
+      "publisher_code": "2900384",
+      "Publisher_address": "69079 NE 256th St.",
+      "book": [
+        {
+          "_id": "1010",
+          "book_isbn": "ISBN 098737468",
+          "book_name": "Cute Dogs",
+          "book_price": "10.99",
+          "author": [
+            {
+              "_id": "2020",
+              "author_first_name": "Jerry",
+              "author_last_name": "Tong",
+              "author_phone": "206-666-9999",
+              "author_email": "jt@hotmail.com"
+            }
+          ]
+        },
+        {
+          "_id": "1011",
+          "book_isbn": "ISBN 098739866",
+          "book_name": "Cute Cats",
+          "book_price": "10.99",
+          "author": [
+            {
+              "_id": "2020",
+              "author_first_name": "Jerry",
+              "author_last_name": "Tong",
+              "author_phone": "206-666-9999",
+              "author_email": "jt@hotmail.com"
+            },
+            {
+              "_id": "2021",
+              "author_first_name": "Merry",
+              "author_last_name": "Lee",
+              "author_phone": "206-888-7777",
+              "author_email": "ml@gmail.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+/*  
+Title: assignment3.2_2NF_NodeSecurity.json 
+Author: April Yang
+Date: 08 26 2022
+Description: Create a NoSQL Data Structure to represent NodeSecurity’s business rules.  
+*/
+
+{
+  "user": [
+    {
+      "_id": "001",
+      "firstName": "Jenney",
+      "lastName": "Wong",
+      "role": [
+        {
+          "_id": "1010",
+          "title": "senior_agent",
+          "permission": [
+            {
+              "_id": "2020",
+              "description": "Access All Level's Tickets"
+            },
+            {
+              "_id": "2021",
+              "description": "Give Feedback to All Agents"
+            }
+          ]
+        },
+        {
+          "_id": "1011",
+          "title": "team_lead",
+          "permission": [
+            {
+              "_id": "2020",
+              "description": "Access to All Level's Tickets"
+            },
+            {
+              "_id": "2021",
+              "description": "Give Feedback to All Agents"
+            },
+            {
+              "_id": "2022",
+              "description": "Access to Review All Feedback "
+            },
+            {
+              "_id": "2023",
+              "description": "Approve or Reject Feedback "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
