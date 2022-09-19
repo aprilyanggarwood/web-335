@@ -5,28 +5,17 @@
 
 # import the MongoClient
 from pymongo import MongoClient
-import datetime
+# import datetime
 
 # import ssl
 # ssl._create_default_https_context = ssl._create_unverified_context
 
 # session.get("https://python.org", ssl=False)
 
-import ssl
-context = ssl._create_unverified_context()
-urllib.request.urlopen(req,context=context)
+# import certifi
+# ca = certifi.where()
 
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
-urllib2.urlopen("https://google.com").read()
-
-requests.get(url, headers=Hostreferer,verify=False)
-
-#import certifi
-
-#ca = certifi.where()
-
-#client = MongoClient('mongodb+srv://web335_user:s3cret@cluster0.vvn3y4f.mongodb.net/web335DBretryWrites=true&w=majority',tlsCAFile=ca)
+# client = MongoClient('mongodb+srv://web335_user:s3cret@cluster0.vvn3y4f.mongodb.net/web335DBretryWrites=true&w=majority',tlsCAFile=ca)
 # build a connection string to connect to 
 client = MongoClient('mongodb+srv://web335_user:s3cret@cluster0.vvn3y4f.mongodb.net/web335DBretryWrites=true&w=majority')
 
