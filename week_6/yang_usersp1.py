@@ -7,20 +7,19 @@
 from pymongo import MongoClient
 # import datetime
 
-# import ssl
-# ssl._create_default_https_context = ssl._create_unverified_context
+# solved SSL Certification problem 
+import certifi
+ca = certifi.where()
 
-# session.get("https://python.org", ssl=False)
-
-# import certifi
-# ca = certifi.where()
-
-# client = MongoClient('mongodb+srv://web335_user:s3cret@cluster0.vvn3y4f.mongodb.net/web335DBretryWrites=true&w=majority',tlsCAFile=ca)
 # build a connection string to connect to 
-client = MongoClient('mongodb+srv://web335_user:s3cret@cluster0.vvn3y4f.mongodb.net/web335DBretryWrites=true&w=majority')
+client = MongoClient('mongodb+srv://web335_user:s3cret@cluster0.vvn3y4f.mongodb.net/web335DBretryWrites=true&w=majority',tlsCAFile=ca)
+
+#client = MongoClient('mongodb+srv://web335_user:s3cret@cluster0.vvn3y4f.mongodb.net/web335DBretryWrites=true&w=majority')
 
 # Configure a variable to access the web335DB
 db = client['web335DB']
+# for user in db.users.find({}):
+#     print(user)
 # Create a variable to access the user collection
 collection = db['users']
 
@@ -29,8 +28,11 @@ users = collection.find()
 for user in users:
     print(user)
 
+print("\n")
 # display a document where the employeeId is 1011.
 print(db.users.find_one({"employeeId":"1011"}))
+
+print("\n")
 # display a document where the lastName is Mozart. 
 print(db.users.find_one({"lastName":"Mozart"}))
 
